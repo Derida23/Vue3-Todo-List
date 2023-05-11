@@ -1,0 +1,9 @@
+.org-card {
+  @apply h-[15rem];
+  @apply w-[15rem];
+  @apply bg-white;
+  @apply drop-shadow-card;
+  @apply p-[0.7rem];
+  @apply rounded-[0.9rem];
+  @apply mb-[1rem];
+}

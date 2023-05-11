@@ -1,0 +1,11 @@
+.molecules-filter {
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+
+  @apply mb-5;
+
+  .logo-privy {
+    @apply text-privy;
+  }
+}

@@ -1,0 +1,30 @@
+.atom-tab {
+  @apply flex;
+  @apply items-center;
+  @apply bg-[#FFFEFE];
+  @apply min-h-[40px];
+  @apply px-2;
+
+  @apply rounded-full;
+  @apply drop-shadow-card;
+
+  .tab {
+    @apply cursor-pointer;
+    @apply px-5;
+    @apply py-1;
+    @apply text-[14px];
+
+    @apply transition-colors;
+    @apply duration-100;
+  }
+
+  .active {
+    // @apply bg-[#FC8B1A];
+    @apply text-white;
+    @apply bg-gradient-to-r;
+    @apply from-[#FC8B1A];
+    @apply to-[#FC5C09];
+    @apply rounded-full;
+    @apply font-semibold;
+  }
+}

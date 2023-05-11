@@ -1,0 +1,29 @@
+.atom-select {
+  @apply w-full;
+
+  .select {
+    @apply mt-1;
+
+    select {
+      @apply w-full;
+      @apply min-h-[40px];
+      @apply p-2;
+      @apply rounded-lg;
+
+      @apply border;
+      @apply border-[#BBBAC3];
+      @apply text-[14px];
+
+      &::placeholder {
+        @apply font-light;
+        @apply text-[14px];
+      }
+
+      &:focus {
+        @apply outline-none;
+        @apply border;
+        @apply border-primary;
+      }
+    }
+  }
+}

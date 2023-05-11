@@ -1,0 +1,12 @@
+📱 General
+👔 Work
+🧑‍💻 Personal
+🥅 Sport
+
+Object : {
+  id: 0,
+  item: '',
+  completed: false,
+  category: '',
+  date: '',
+}

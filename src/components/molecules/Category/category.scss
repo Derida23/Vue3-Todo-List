@@ -1,0 +1,35 @@
+.molecules-category {
+  @apply w-full;
+  @apply flex;
+  @apply items-center;
+  @apply mb-3;
+
+  .avatar {
+    @apply flex;
+    @apply w-[50px];
+    @apply h-[50px];
+    @apply bg-slate-200;
+    @apply justify-center;
+    @apply items-center;
+    @apply text-center;
+    @apply rounded-full;
+
+    span {
+      @apply text-[25px];
+    }
+  }
+
+  .text {
+    @apply ml-2;
+
+    &-category {
+      @apply font-bold;
+      @apply text-[16px];
+    }
+
+    &-date {
+      @apply font-light;
+      @apply text-[12px];
+    }
+  }
+}

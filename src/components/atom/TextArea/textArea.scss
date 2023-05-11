@@ -1,0 +1,27 @@
+.atom-text-area {
+  @apply w-full;
+  @apply mb-3;
+
+  .text-area {
+    @apply mt-1;
+
+    textarea {
+      @apply p-3;
+      @apply rounded-lg;
+      @apply border;
+      @apply border-[#BBBAC3];
+      @apply text-[14px];
+
+      &::placeholder {
+        @apply font-light;
+        @apply text-[14px];
+      }
+
+      &:focus {
+        @apply outline-none;
+        @apply border;
+        @apply border-primary;
+      }
+    }
+  }
+}

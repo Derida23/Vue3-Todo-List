@@ -1,0 +1,15 @@
+.molecules-list {
+  @apply border-2;
+  @apply border-dashed;
+  @apply p-[10px];
+  @apply mb-3;
+  @apply h-[112px];
+
+  &.completed {
+    @apply border-success;
+  }
+
+  p {
+    @apply text-[13px];
+  }
+}
