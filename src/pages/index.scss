@@ -31,4 +31,11 @@
     @apply md:col-span-3;
     @apply h-full;
   }
+
+  .empty-wrapper {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    @apply h-2/3;
+  }
 }

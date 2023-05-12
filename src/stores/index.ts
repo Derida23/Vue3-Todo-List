@@ -1,11 +1,10 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
-import { schedules } from "@/utils/constants";
 import { ISchedule } from "@/types";
 
 export const useTodoStore = defineStore("todos", () => {
-  const lists = ref<ISchedule[]>(schedules);
+  const lists = ref<ISchedule[]>([]);
 
   const addTodo = (payload: ISchedule) => {
     payload.id = lists.value.length + 1;

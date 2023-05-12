@@ -1,0 +1,28 @@
+.molecules-image {
+  .image-wrapper {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+
+    img {
+      @apply w-1/2;
+    }
+  }
+
+  .text-wrapper {
+    @apply text-center;
+
+    h1 {
+      @apply font-semibold;
+      @apply text-slate-500;
+      @apply text-3xl;
+      @apply mt-8;
+    }
+
+    p {
+      @apply text-slate-500;
+      @apply italic;
+      @apply mt-2;
+    }
+  }
+}
