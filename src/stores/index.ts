@@ -5,11 +5,11 @@ import { schedules } from "@/utils/constants";
 import { ISchedule } from "@/types";
 
 export const useTodoStore = defineStore("todos", () => {
-  const list = ref<ISchedule[]>(schedules);
+  const lists = ref<ISchedule[]>(schedules);
 
   const addTodo = (payload: ISchedule) => {
-    payload.id = list.value.length + 1;
-    list.value.push(payload);
+    payload.id = lists.value.length + 1;
+    lists.value.push(payload);
   };
 
   const deleteTodo = () => {
@@ -20,5 +20,5 @@ export const useTodoStore = defineStore("todos", () => {
     return true;
   };
 
-  return { list, addTodo, deleteTodo, doneTodo };
+  return { lists, addTodo, deleteTodo, doneTodo };
 });
