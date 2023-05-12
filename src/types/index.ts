@@ -7,6 +7,11 @@ export interface ISchedule {
 }
 
 export interface ITab {
-  key: string | number
-  label: string
+  key: string | number;
+  label: string;
+}
+
+export interface ISelect {
+  label: string;
+  value: string;
 }

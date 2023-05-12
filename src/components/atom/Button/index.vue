@@ -13,7 +13,7 @@ const props = defineProps({
 });
 
 const buttonClass = computed(() => {
-  let className = `${props.variant} ${props.rounded} ${props.height}`;
+  let className = `${props.variant} `;
 
   return className;
 });

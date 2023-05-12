@@ -1,4 +1,4 @@
-const shedules = [
+export const shedules = [
   {
     id: 1,
     category: "sport",
@@ -29,4 +29,9 @@ const shedules = [
   },
 ];
 
-export default shedules
+export const categories = [
+  { value: "general", label: "General" },
+  { value: "work", label: "Work" },
+  { value: "personal", label: "Personal" },
+  { value: "sport", label: "Sport" },
+];

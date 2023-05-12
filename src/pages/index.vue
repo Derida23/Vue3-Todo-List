@@ -2,8 +2,7 @@
 import Filter from "@/components/molecules/Filter/index.vue";
 import Card from "@/components/organisms/Card/index.vue";
 import Form from "@/components/organisms/Form/index.vue";
-import Signature from "@/components/atom/Signature/index.vue";
-import shedules from "@/utils/constants";
+import { shedules } from "@/utils/constants";
 </script>
 
 <template>
@@ -22,7 +21,6 @@ import shedules from "@/utils/constants";
       <div class="todo-wrapper">
         <Form />
       </div>
-      <Signature />
     </div>
   </div>
 </template>
