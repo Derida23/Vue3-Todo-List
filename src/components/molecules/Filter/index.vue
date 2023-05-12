@@ -2,7 +2,14 @@
 import PrivyIcon from "@/assets/icon/privy-icon.vue";
 import Tab from "@/components/atom/Tab/index.vue";
 import { ITab } from "@/types";
-import { markRaw, ref } from "vue";
+import { computed, markRaw } from "vue";
+
+const props = defineProps({
+  active: {
+    type: String,
+    required: true,
+  },
+});
 
 const tabOptions: Array<ITab> = markRaw([
   {
@@ -19,7 +26,18 @@ const tabOptions: Array<ITab> = markRaw([
   },
 ]);
 
-const isActive = ref("all");
+const emit = defineEmits<{
+  (e: "change", value: string): void;
+}>();
+
+const isActive = computed({
+  get() {
+    return props.active;
+  },
+  set(value: string) {
+    emit("change", value);
+  },
+});
 </script>
 
 <template>
