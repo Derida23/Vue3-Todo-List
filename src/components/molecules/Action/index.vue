@@ -9,16 +9,18 @@ const props = defineProps({
     default: false,
   },
 });
+
+const emit = defineEmits(["delete"]);
 </script>
 
 <template>
   <div class="molecules-action">
-    <Button variant="success" :disabled="completed" class="mr-2">
+    <Button variant="success" :disabled="props.completed" class="mr-2">
       <template #content>
         <FluentCheckmark12Filled color="white " />
       </template>
     </Button>
-    <Button variant="error" :disabled="completed">
+    <Button variant="error" :disabled="completed" @click="() => emit('delete')">
       <template #content>
         <FluentDelete12Filled color="white " />
       </template>

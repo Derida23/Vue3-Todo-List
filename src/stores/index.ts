@@ -12,8 +12,10 @@ export const useTodoStore = defineStore("todos", () => {
     lists.value.push(payload);
   };
 
-  const deleteTodo = () => {
-    return true;
+  const deleteTodo = (id: number) => {
+    const index = lists.value.findIndex((obj) => obj.id === id);
+
+    lists.value.splice(index, 1);
   };
 
   const doneTodo = () => {
