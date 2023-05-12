@@ -18,8 +18,10 @@ export const useTodoStore = defineStore("todos", () => {
     lists.value.splice(index, 1);
   };
 
-  const doneTodo = () => {
-    return true;
+  const doneTodo = (id: number) => {
+    const index = lists.value.findIndex((obj) => obj.id === id);
+
+    lists.value[index].completed = true
   };
 
   return { lists, addTodo, deleteTodo, doneTodo };

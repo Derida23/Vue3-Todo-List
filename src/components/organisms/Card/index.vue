@@ -7,7 +7,7 @@ import List from "@/components/molecules/List/index.vue";
 import { ISchedule } from "@/types";
 import { useTodoStore } from "@/stores";
 
-const { deleteTodo } = useTodoStore();
+const { deleteTodo, doneTodo } = useTodoStore();
 
 const props = defineProps({
   data: {
@@ -20,14 +20,20 @@ const onDelete = () => {
   deleteTodo(props.data.id);
 };
 
-// const onCompleted = () => {};
+const onCompleted = () => {
+  doneTodo(props.data.id);
+};
 </script>
 
 <template>
   <div class="org-card">
     <Category :category="props.data.category" :date="data.date" />
     <List :list="data.item" :completed="data.completed" />
-    <Action :completed="data.completed" @delete="onDelete" />
+    <Action
+      :completed="data.completed"
+      @delete="onDelete"
+      @done="onCompleted"
+    />
   </div>
 </template>
 

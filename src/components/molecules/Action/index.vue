@@ -10,12 +10,17 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["delete"]);
+const emit = defineEmits(["delete", "done"]);
 </script>
 
 <template>
   <div class="molecules-action">
-    <Button variant="success" :disabled="props.completed" class="mr-2">
+    <Button
+      variant="success"
+      :disabled="props.completed"
+      class="mr-2"
+      @click="() => emit('done')"
+    >
       <template #content>
         <FluentCheckmark12Filled color="white " />
       </template>

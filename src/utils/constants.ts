@@ -3,7 +3,7 @@ export const schedules = [
     id: 1,
     category: "sport",
     item: "Running in the morning vibes",
-    completed: true,
+    completed: false,
     date: "10 May 2023 - 07:00",
   },
   {
