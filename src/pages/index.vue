@@ -3,8 +3,12 @@ import Filter from "@/components/molecules/Filter/index.vue";
 import Card from "@/components/organisms/Card/index.vue";
 import Form from "@/components/organisms/Form/index.vue";
 
-import { shedules } from "@/utils/constants";
 import { ref } from "vue";
+
+import { useTodoStore } from "@/stores";
+import { storeToRefs } from "pinia";
+
+const { list } = storeToRefs(useTodoStore());
 
 const category = ref("all");
 
@@ -18,11 +22,7 @@ const onCategory = (value: string) => {
     <div class="todo-wrapper todo-list">
       <div><Filter :active="category" @change="onCategory" /></div>
       <div class="todo-list-card">
-        <Card
-          v-for="(item, i) in shedules"
-          :key="`schedule + ${i}`"
-          :data="item"
-        />
+        <Card v-for="(item, i) in list" :key="`schedule + ${i}`" :data="item" />
       </div>
     </div>
     <div class="todo-input">

@@ -32,7 +32,6 @@ const vModel = computed({
     <div class="select">
       <select v-model="vModel">
         <option value="" data-default hidden>Choose category</option>
-
         <option
           v-for="(option, i) in options"
           :key="`option ${i}`"

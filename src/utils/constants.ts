@@ -1,4 +1,4 @@
-export const shedules = [
+export const schedules = [
   {
     id: 1,
     category: "sport",
@@ -13,20 +13,20 @@ export const shedules = [
     completed: false,
     date: "10 May 2023 - 08:00",
   },
-  {
-    id: 3,
-    category: "work",
-    item: "Open weekly absent and jira team",
-    completed: false,
-    date: "10 May 2023 - 10:00",
-  },
-  {
-    id: 4,
-    category: "personal",
-    item: "Freelance sheet correction data",
-    completed: false,
-    date: "10 May 2023 - 18:00",
-  },
+  // {
+  //   id: 3,
+  //   category: "work",
+  //   item: "Open weekly absent and jira team",
+  //   completed: false,
+  //   date: "10 May 2023 - 10:00",
+  // },
+  // {
+  //   id: 4,
+  //   category: "personal",
+  //   item: "Freelance sheet correction data",
+  //   completed: false,
+  //   date: "10 May 2023 - 18:00",
+  // },
 ];
 
 export const categories = [

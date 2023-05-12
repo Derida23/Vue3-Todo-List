@@ -5,16 +5,33 @@ import Input from "@/components/atom/Input/index.vue";
 import Field from "@/components/molecules/Field/index.vue";
 import ActionSave from "@/components/molecules/ActionSave/index.vue";
 
-import { reactive } from "vue";
+import { ref } from "vue";
 import { categories } from "@/utils/constants";
+import { useTodoStore } from "@/stores";
 
-const todo = reactive({
+const todo = ref({
   id: 0,
   category: "",
   item: "",
   completed: false,
   date: "",
 });
+
+const { addTodo } = useTodoStore();
+
+const onSave = () => {
+  addTodo(todo.value);
+};
+
+const onReset = () => {
+  todo.value = {
+    id: 0,
+    category: "",
+    item: "",
+    completed: false,
+    date: "",
+  };
+};
 </script>
 
 <template>
@@ -32,7 +49,7 @@ const todo = reactive({
     </div>
   </div>
   <div class="org-save">
-    <ActionSave />
+    <ActionSave @save="onSave" @reset="onReset" :data="todo" />
   </div>
 </template>
 

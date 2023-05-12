@@ -12,6 +12,10 @@ const props = defineProps({
     default: {},
   },
 });
+
+// const onDelete = () => {};
+
+// const onCompleted = () => {};
 </script>
 
 <template>
