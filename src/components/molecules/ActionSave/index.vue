@@ -35,7 +35,7 @@ const onSave = () => {
 
 <template>
   <div class="molecules-action-save">
-    <Button variant="success" class="mr-2" @click="onSave" :disabled="isEmpty">
+    <Button variant="success" class="mr-2" :disabled="isEmpty" @click="onSave">
       <template #content>
         <span class="mx-7 my-1.5 text-white">Save</span>
       </template>

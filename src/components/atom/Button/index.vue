@@ -17,11 +17,17 @@ const buttonClass = computed(() => {
 
   return className;
 });
+
+const emit = defineEmits(["click"]);
+
+const onClick = (event: Event) => {
+  emit("click", event);
+};
 </script>
 
 <template>
   <div class="atom-button">
-    <button :class="buttonClass" :disabled="disabled">
+    <button :class="buttonClass" :disabled="disabled" @click="onClick">
       <div class="content">
         <slot name="content" />
       </div>
