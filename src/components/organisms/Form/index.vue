@@ -21,6 +21,7 @@ const { addTodo } = useTodoStore();
 
 const onSave = () => {
   addTodo(todo.value);
+  onReset();
 };
 
 const onReset = () => {
